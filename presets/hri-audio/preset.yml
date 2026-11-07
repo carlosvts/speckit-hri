@@ -1,0 +1,36 @@
+schema_version: "1.0"
+
+preset:
+  id: "hri-audio"
+  name: "HRI Audio"
+  version: "0.1.0"
+  description: "Audio output profile for hri-core: hearing safety, latency and continuity, state-to-sound mapping, acoustic context. Install with --priority 5."
+  author: "carlosvts"
+  repository: "https://github.com/carlosvts/speckit-hri"
+  license: "Apache-2.0"
+
+requires:
+  speckit_version: ">=1.3.2"
+
+provides:
+  templates:
+    - type: "template"
+      name: "spec-template"
+      file: "templates/spec-template.md"
+      description: "Appends Audio Output requirements to the HRI section of the spec"
+      strategy: "append"
+    - type: "template"
+      name: "plan-template"
+      file: "templates/plan-template.md"
+      description: "Appends Audio Pipeline design to the HRI Design section of the plan"
+      strategy: "append"
+    - type: "template"
+      name: "tasks-template"
+      file: "templates/tasks-template.md"
+      description: "Appends mandatory audio tasks to the HRI tasks"
+      strategy: "append"
+
+tags:
+  - "hri"
+  - "audio"
+  - "human-robot-interaction"
