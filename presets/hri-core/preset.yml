@@ -1,0 +1,26 @@
+schema_version: "1.0"
+
+preset:
+  id: "hri-core"
+  name: "HRI Core"
+  version: "0.1.0"
+  description: "Base spec-driven development preset for human-robot interaction software: interaction scenarios, signal contracts, timing budgets, failure modes, privacy, evaluation."
+  author: "carlosvts"
+  repository: "https://github.com/carlosvts/speckit-hri"
+  license: "Apache-2.0"
+
+requires:
+  speckit_version: ">=1.3.2"
+
+provides:
+  templates:
+    - type: "template"
+      name: "constitution-template"
+      file: "templates/constitution-template.md"
+      description: "HRI baseline constitution with fixed principles and project slots"
+      replaces: "constitution-template"
+
+tags:
+  - "hri"
+  - "robotics"
+  - "human-robot-interaction"
